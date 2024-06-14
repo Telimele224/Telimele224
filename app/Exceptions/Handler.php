@@ -38,6 +38,18 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        // Vérifier si l'exception est une ValidationException
+        if ($exception instanceof \Illuminate\Validation\ValidationException) {
+            // Rediriger avec les messages d'erreur et les anciennes entrées de formulaire
+            return redirect()->back()->withErrors($exception->validator)->withInput();
+        }
+
+        // Gérer d'autres types d'exceptions si nécessaire
+        // Par exemple, pour les erreurs d'authentification
+        if ($exception instanceof \Illuminate\Auth\AuthenticationException) {
+            return redirect()->guest(route('login'));
+        }
+
         // Passer l'exception à la vue 404
         return response()->view('errors.404', ['exception' => $exception], 404);
     }

@@ -29,7 +29,9 @@
                    <p role="status" aria-live="polite" aria-atomic="true"></p>
                    <ul></ul>
                 </div>
-                <form action="https://garantiwebtasarim.com/wordpress/medidoc/#wpcf7-f766-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+                <form action="#" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+                    @csrf
+                    @method('post')
                    <div style="display: none;">
                       <input type="hidden" name="_wpcf7" value="766" />
                       <input type="hidden" name="_wpcf7_version" value="5.5.6.1" />
@@ -43,7 +45,7 @@
                       <span class="wpcf7-form-control-wrap email-217"><input type="email" name="email-217" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-popup__input" aria-required="true" aria-invalid="false" placeholder="Votre adresse mail" /></span>
                    </div>
                    <div class="form__grup wow fadeInUp" data-wow-delay="0.9s">
-                      <input type="submit" value="Abonnez-vous →" class="wpcf7-form-control has-spinner wpcf7-submit custom-buttonw1" />
+                      <input type="submit" value="Abonnez-vous →" class="wpcf7-form-control has-spinner wpcf7-submit custom-buttonw1" disabled/>
                    </div>
                    <div class="wpcf7-response-output" aria-hidden="true"></div>
                 </form>

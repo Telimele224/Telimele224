@@ -63,6 +63,7 @@ class MenuNavigation extends Controller
             'message' =>'required|min:5',
 
         ]);
+        dd($data);
         Mail::to('receipentemail@gmail.com')->send(new ContactUs($data));
 
         // dd('sent');
