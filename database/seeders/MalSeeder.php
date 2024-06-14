@@ -10,10 +10,10 @@ class MalSeeder extends Seeder
     public function run()
     {
         // Maux
-        $mal_de_tete = Illness::create(['nom' => 'Maux de tête']);
-        $mal_de_ventre = Illness::create(['nom' => 'Maux de ventre']);
-        $douleur_dentaire = Illness::create(['nom' => 'Douleur dentaire']);
-        $douleur_articulaire = Illness::create(['nom' => 'Douleur articulaire']);
-        $douleur_musculaire = Illness::create(['nom' => 'Douleur musculaire']);
+        Illness::updateOrCreate(['nom' => 'Maux de tête']);
+        Illness::updateOrCreate(['nom' => 'Maux de ventre']);
+        Illness::updateOrCreate(['nom' => 'Douleur dentaire']);
+        Illness::updateOrCreate(['nom' => 'Douleur articulaire']);
+        Illness::updateOrCreate(['nom' => 'Douleur musculaire']);
     }
 }

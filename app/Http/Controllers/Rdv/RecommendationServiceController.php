@@ -137,7 +137,7 @@ public function recommander_servicePar_maladie(Request $request)
     // Retourner la vue avec les services recommandés
     return view('rdv.selectionService', compact('services'));
 }
-       
+
 
 
 
